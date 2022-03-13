@@ -1,9 +1,10 @@
+require('dotenv').config();
 require('events').EventEmitter.prototype._maxListeners = 300;
 const Discord = require('discord.js')
 global.client = new Discord.Client({
     intents: 32767
 }) 
-client.login("OTM5NjAzNjA4NDEwOTM1MzY2.Yf7QDQ.AsdNX4Ss5aP0Shf1d-AltQYy93E");
+client.login(process.env.token);
 const fs = require("fs");
 
 client.commands = new Discord.Collection();
